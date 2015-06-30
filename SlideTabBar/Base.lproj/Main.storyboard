@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Cc-id-9Jn">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--SlideTab-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSP-4N-UDs">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qSP-4N-UDs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="BzQ-cK-y7A"/>
+                            <constraint firstAttribute="bottom" secondItem="qSP-4N-UDs" secondAttribute="bottom" id="Mgw-aK-yBt"/>
+                            <constraint firstAttribute="trailing" secondItem="qSP-4N-UDs" secondAttribute="trailing" id="hFl-Bj-q9n"/>
+                            <constraint firstItem="qSP-4N-UDs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="s2p-eR-Xft"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SlideTab" id="c7h-11-aQJ">
+                        <barButtonItem key="leftBarButtonItem" title="——" id="zyo-bj-bBk">
+                            <connections>
+                                <action selector="jian:" destination="vXZ-lx-hvc" id="GSj-8u-E1s"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="C0q-jo-ewb">
+                            <connections>
+                                <action selector="add:" destination="vXZ-lx-hvc" id="Jqc-ZA-QO0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="superView" destination="qSP-4N-UDs" id="YWb-Pf-tDA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1434" y="-226"/>
+        </scene>
+        <!--Push Web View Controller-->
+        <scene sceneID="B3G-mX-pkB">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzK-GF-nv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="PushWebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hn4-gm-oec" customClass="PushWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RCK-BB-M0A"/>
+                        <viewControllerLayoutGuide type="bottom" id="cIJ-7D-RIs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MGA-Hl-sKa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Aa-S0-Ucx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Aa-S0-Ucx" firstAttribute="top" secondItem="MGA-Hl-sKa" secondAttribute="top" id="5Xu-GE-X7r"/>
+                            <constraint firstItem="cIJ-7D-RIs" firstAttribute="top" secondItem="3Aa-S0-Ucx" secondAttribute="bottom" id="Ofk-nC-a8N"/>
+                            <constraint firstAttribute="trailing" secondItem="3Aa-S0-Ucx" secondAttribute="trailing" id="PsI-ej-Tgv"/>
+                            <constraint firstItem="3Aa-S0-Ucx" firstAttribute="leading" secondItem="MGA-Hl-sKa" secondAttribute="leading" id="rjK-SV-Lme"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Sa-0d-kcY">
+                        <barButtonItem key="leftBarButtonItem" title="关闭" id="4Hj-1Y-qvN">
+                            <connections>
+                                <action selector="tapCloseButton:" destination="hn4-gm-oec" id="5xf-rD-8Bd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="3Aa-S0-Ucx" id="VjP-p5-vBc"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2867" y="-226"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uJt-Q6-7aC">
+            <objects>
+                <navigationController storyboardIdentifier="RootNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Cc-id-9Jn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A6d-Zj-Cl9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="MSr-X5-cea"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="soc-na-ZC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="-448"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fIy-VG-a7x">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcu-ob-HTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="PushWebViewControllerNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nRq-iU-iDH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gQD-GX-i6s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hn4-gm-oec" kind="relationship" relationship="rootViewController" id="XGk-WT-jUz"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2055" y="-226"/>
+        </scene>
+    </scenes>
+</document>

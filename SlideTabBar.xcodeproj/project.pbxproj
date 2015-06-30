@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4C79EE81B3BD7AB00F27F5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C79EE71B3BD7AB00F27F5D /* main.m */; };
+		F4C79EEB1B3BD7AB00F27F5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C79EEA1B3BD7AB00F27F5D /* AppDelegate.m */; };
+		F4C79EEE1B3BD7AB00F27F5D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C79EED1B3BD7AB00F27F5D /* ViewController.m */; };
+		F4C79EF11B3BD7AB00F27F5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C79EEF1B3BD7AB00F27F5D /* Main.storyboard */; };
+		F4C79EF31B3BD7AB00F27F5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C79EF21B3BD7AB00F27F5D /* Images.xcassets */; };
+		F4C79EF61B3BD7AB00F27F5D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C79EF41B3BD7AB00F27F5D /* LaunchScreen.xib */; };
+		F4C79F021B3BD7AB00F27F5D /* SlideTabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C79F011B3BD7AB00F27F5D /* SlideTabBarTests.m */; };
+		F4C79F0D1B3BD88E00F27F5D /* SlideTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C79F0C1B3BD88E00F27F5D /* SlideTabBarView.m */; };
+		F4D023151B423DC300AEDDE1 /* SlideBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D023141B423DC300AEDDE1 /* SlideBarCell.m */; };
+		F4D023181B423DE800AEDDE1 /* SlideBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D023171B423DE800AEDDE1 /* SlideBarCell.xib */; };
+		F4D950C81B3D26A1009BC4A5 /* PushWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D950C71B3D26A1009BC4A5 /* PushWebViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4C79EFC1B3BD7AB00F27F5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4C79EDA1B3BD7AB00F27F5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4C79EE11B3BD7AB00F27F5D;
+			remoteInfo = SlideTabBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4C79EE21B3BD7AB00F27F5D /* SlideTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C79EE61B3BD7AB00F27F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4C79EE71B3BD7AB00F27F5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4C79EE91B3BD7AB00F27F5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4C79EEA1B3BD7AB00F27F5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F4C79EEC1B3BD7AB00F27F5D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F4C79EED1B3BD7AB00F27F5D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F4C79EF01B3BD7AB00F27F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4C79EF21B3BD7AB00F27F5D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F4C79EF51B3BD7AB00F27F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F4C79EFB1B3BD7AB00F27F5D /* SlideTabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideTabBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C79F001B3BD7AB00F27F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4C79F011B3BD7AB00F27F5D /* SlideTabBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarTests.m; sourceTree = "<group>"; };
+		F4C79F0B1B3BD88E00F27F5D /* SlideTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarView.h; sourceTree = "<group>"; };
+		F4C79F0C1B3BD88E00F27F5D /* SlideTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarView.m; sourceTree = "<group>"; };
+		F4D023131B423DC300AEDDE1 /* SlideBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideBarCell.h; sourceTree = "<group>"; };
+		F4D023141B423DC300AEDDE1 /* SlideBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideBarCell.m; sourceTree = "<group>"; };
+		F4D023171B423DE800AEDDE1 /* SlideBarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideBarCell.xib; sourceTree = "<group>"; };
+		F4D950C61B3D26A1009BC4A5 /* PushWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushWebViewController.h; sourceTree = "<group>"; };
+		F4D950C71B3D26A1009BC4A5 /* PushWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushWebViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4C79EDF1B3BD7AB00F27F5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C79EF81B3BD7AB00F27F5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4C79ED91B3BD7AB00F27F5D = {
+			isa = PBXGroup;
+			children = (
+				F4C79EE41B3BD7AB00F27F5D /* SlideTabBar */,
+				F4C79EFE1B3BD7AB00F27F5D /* SlideTabBarTests */,
+				F4C79EE31B3BD7AB00F27F5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4C79EE31B3BD7AB00F27F5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4C79EE21B3BD7AB00F27F5D /* SlideTabBar.app */,
+				F4C79EFB1B3BD7AB00F27F5D /* SlideTabBarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4C79EE41B3BD7AB00F27F5D /* SlideTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F4D023161B423DCE00AEDDE1 /* View */,
+				F4C79EE91B3BD7AB00F27F5D /* AppDelegate.h */,
+				F4C79EEA1B3BD7AB00F27F5D /* AppDelegate.m */,
+				F4C79EEC1B3BD7AB00F27F5D /* ViewController.h */,
+				F4C79EED1B3BD7AB00F27F5D /* ViewController.m */,
+				F4D950C61B3D26A1009BC4A5 /* PushWebViewController.h */,
+				F4D950C71B3D26A1009BC4A5 /* PushWebViewController.m */,
+				F4C79EEF1B3BD7AB00F27F5D /* Main.storyboard */,
+				F4C79EF21B3BD7AB00F27F5D /* Images.xcassets */,
+				F4C79EF41B3BD7AB00F27F5D /* LaunchScreen.xib */,
+				F4C79EE51B3BD7AB00F27F5D /* Supporting Files */,
+			);
+			path = SlideTabBar;
+			sourceTree = "<group>";
+		};
+		F4C79EE51B3BD7AB00F27F5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4C79EE61B3BD7AB00F27F5D /* Info.plist */,
+				F4C79EE71B3BD7AB00F27F5D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4C79EFE1B3BD7AB00F27F5D /* SlideTabBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4C79F011B3BD7AB00F27F5D /* SlideTabBarTests.m */,
+				F4C79EFF1B3BD7AB00F27F5D /* Supporting Files */,
+			);
+			path = SlideTabBarTests;
+			sourceTree = "<group>";
+		};
+		F4C79EFF1B3BD7AB00F27F5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4C79F001B3BD7AB00F27F5D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4D023161B423DCE00AEDDE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4D023131B423DC300AEDDE1 /* SlideBarCell.h */,
+				F4D023141B423DC300AEDDE1 /* SlideBarCell.m */,
+				F4D023171B423DE800AEDDE1 /* SlideBarCell.xib */,
+				F4C79F0B1B3BD88E00F27F5D /* SlideTabBarView.h */,
+				F4C79F0C1B3BD88E00F27F5D /* SlideTabBarView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4C79EE11B3BD7AB00F27F5D /* SlideTabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4C79F051B3BD7AB00F27F5D /* Build configuration list for PBXNativeTarget "SlideTabBar" */;
+			buildPhases = (
+				F4C79EDE1B3BD7AB00F27F5D /* Sources */,
+				F4C79EDF1B3BD7AB00F27F5D /* Frameworks */,
+				F4C79EE01B3BD7AB00F27F5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlideTabBar;
+			productName = SlideTabBar;
+			productReference = F4C79EE21B3BD7AB00F27F5D /* SlideTabBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4C79EFA1B3BD7AB00F27F5D /* SlideTabBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4C79F081B3BD7AB00F27F5D /* Build configuration list for PBXNativeTarget "SlideTabBarTests" */;
+			buildPhases = (
+				F4C79EF71B3BD7AB00F27F5D /* Sources */,
+				F4C79EF81B3BD7AB00F27F5D /* Frameworks */,
+				F4C79EF91B3BD7AB00F27F5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4C79EFD1B3BD7AB00F27F5D /* PBXTargetDependency */,
+			);
+			name = SlideTabBarTests;
+			productName = SlideTabBarTests;
+			productReference = F4C79EFB1B3BD7AB00F27F5D /* SlideTabBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4C79EDA1B3BD7AB00F27F5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "李泽鲁";
+				TargetAttributes = {
+					F4C79EE11B3BD7AB00F27F5D = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					F4C79EFA1B3BD7AB00F27F5D = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = F4C79EE11B3BD7AB00F27F5D;
+					};
+				};
+			};
+			buildConfigurationList = F4C79EDD1B3BD7AB00F27F5D /* Build configuration list for PBXProject "SlideTabBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4C79ED91B3BD7AB00F27F5D;
+			productRefGroup = F4C79EE31B3BD7AB00F27F5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4C79EE11B3BD7AB00F27F5D /* SlideTabBar */,
+				F4C79EFA1B3BD7AB00F27F5D /* SlideTabBarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4C79EE01B3BD7AB00F27F5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C79EF11B3BD7AB00F27F5D /* Main.storyboard in Resources */,
+				F4C79EF61B3BD7AB00F27F5D /* LaunchScreen.xib in Resources */,
+				F4C79EF31B3BD7AB00F27F5D /* Images.xcassets in Resources */,
+				F4D023181B423DE800AEDDE1 /* SlideBarCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C79EF91B3BD7AB00F27F5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4C79EDE1B3BD7AB00F27F5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C79F0D1B3BD88E00F27F5D /* SlideTabBarView.m in Sources */,
+				F4C79EEE1B3BD7AB00F27F5D /* ViewController.m in Sources */,
+				F4C79EEB1B3BD7AB00F27F5D /* AppDelegate.m in Sources */,
+				F4D023151B423DC300AEDDE1 /* SlideBarCell.m in Sources */,
+				F4D950C81B3D26A1009BC4A5 /* PushWebViewController.m in Sources */,
+				F4C79EE81B3BD7AB00F27F5D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C79EF71B3BD7AB00F27F5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C79F021B3BD7AB00F27F5D /* SlideTabBarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4C79EFD1B3BD7AB00F27F5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4C79EE11B3BD7AB00F27F5D /* SlideTabBar */;
+			targetProxy = F4C79EFC1B3BD7AB00F27F5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4C79EEF1B3BD7AB00F27F5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4C79EF01B3BD7AB00F27F5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4C79EF41B3BD7AB00F27F5D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4C79EF51B3BD7AB00F27F5D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4C79F031B3BD7AB00F27F5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F4C79F041B3BD7AB00F27F5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4C79F061B3BD7AB00F27F5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: zeluli.SlideTabBar";
+				INFOPLIST_FILE = SlideTabBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "477ae4b2-89c5-4a0b-85e1-f40023f9de27";
+			};
+			name = Debug;
+		};
+		F4C79F071B3BD7AB00F27F5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: zeluli.SlideTabBar";
+				INFOPLIST_FILE = SlideTabBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "477ae4b2-89c5-4a0b-85e1-f40023f9de27";
+			};
+			name = Release;
+		};
+		F4C79F091B3BD7AB00F27F5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SlideTabBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideTabBar.app/SlideTabBar";
+			};
+			name = Debug;
+		};
+		F4C79F0A1B3BD7AB00F27F5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SlideTabBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideTabBar.app/SlideTabBar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4C79EDD1B3BD7AB00F27F5D /* Build configuration list for PBXProject "SlideTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C79F031B3BD7AB00F27F5D /* Debug */,
+				F4C79F041B3BD7AB00F27F5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4C79F051B3BD7AB00F27F5D /* Build configuration list for PBXNativeTarget "SlideTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C79F061B3BD7AB00F27F5D /* Debug */,
+				F4C79F071B3BD7AB00F27F5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4C79F081B3BD7AB00F27F5D /* Build configuration list for PBXNativeTarget "SlideTabBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C79F091B3BD7AB00F27F5D /* Debug */,
+				F4C79F0A1B3BD7AB00F27F5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4C79EDA1B3BD7AB00F27F5D /* Project object */;
+}
