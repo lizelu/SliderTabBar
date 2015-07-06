@@ -30,6 +30,12 @@
 
 ///@brife 下面滑动的View
 @property (strong, nonatomic) UIView *slideView;
+
+///@brife 上方的ScrollView
+@property (strong, nonatomic) UIScrollView *topScrollView;
+
+///@brife 上方的view
+@property (strong, nonatomic) UIView *topMainView;
 @end
 
 @implementation SlideTabBarView
@@ -63,10 +69,16 @@
 
 #pragma mark -- 初始化滑动的指示View
 -(void) initSlideView{
-     CGFloat width = _mViewFrame.size.width / _tabCount;
+    
+    CGFloat width = _mViewFrame.size.width / 6;
+    
+    if(self.tabCount <=6){
+        width = _mViewFrame.size.width / self.tabCount;
+    }
+
     _slideView = [[UIView alloc] initWithFrame:CGRectMake(0, TOPHEIGHT - 5, width, 5)];
     [_slideView setBackgroundColor:[UIColor redColor]];
-    [self addSubview:_slideView];
+    [_topScrollView addSubview:_slideView];
 }
 
 
@@ -93,7 +105,7 @@
 -(void) initScrollView{
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, _mViewFrame.origin.y, _mViewFrame.size.width, _mViewFrame.size.height - TOPHEIGHT)];
     _scrollView.contentSize = CGSizeMake(_mViewFrame.size.width * _tabCount, _mViewFrame.size.height - 60);
-    _scrollView.backgroundColor = [UIColor grayColor];
+    _scrollView.backgroundColor = [UIColor whiteColor];
     
     _scrollView.pagingEnabled = YES;
     
@@ -105,7 +117,37 @@
 
 #pragma mark -- 实例化顶部的tab
 -(void) initTopTabs{
-    CGFloat width = _mViewFrame.size.width / _tabCount;
+    CGFloat width = _mViewFrame.size.width / 6;
+    
+    if(self.tabCount <=6){
+        width = _mViewFrame.size.width / self.tabCount;
+    }
+    
+    _topMainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _mViewFrame.size.width, TOPHEIGHT)];
+    
+    _topScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, _mViewFrame.size.width, TOPHEIGHT)];
+    
+    _topScrollView.showsHorizontalScrollIndicator = NO;
+    
+    _topScrollView.showsVerticalScrollIndicator = YES;
+    
+    _topScrollView.bounces = NO;
+    
+    _topScrollView.delegate = self;
+    
+    if (_tabCount >= 6) {
+        _topScrollView.contentSize = CGSizeMake(width * _tabCount, TOPHEIGHT);
+
+    } else {
+        _topScrollView.contentSize = CGSizeMake(_mViewFrame.size.width, TOPHEIGHT);
+    }
+    
+    
+    [self addSubview:_topMainView];
+    
+    [_topMainView addSubview:_topScrollView];
+    
+    
     
     for (int i = 0; i < _tabCount; i ++) {
         
@@ -125,7 +167,7 @@
         
         
         [_topViews addObject:view];
-        [self addSubview:view];
+        [_topScrollView addSubview:view];
     }
 }
 
@@ -140,40 +182,106 @@
 #pragma mark --初始化下方的TableViews
 -(void) initDownTables{
     
-    for (int i = 0; i < _tabCount; i ++) {
+    for (int i = 0; i < 2; i ++) {
         
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(i * _mViewFrame.size.width, 0, _mViewFrame.size.width, _mViewFrame.size.height - TOPHEIGHT)];
         tableView.delegate = self;
         tableView.dataSource = self;
+        tableView.tag = i;
         
         [_scrollTableViews addObject:tableView];
         [_scrollView addSubview:tableView];
     }
-
+    
 }
 
 
+#pragma mark --根据scrollView的滚动位置复用tableView，减少内存开支
+-(void) updateTableWithPageNumber: (NSUInteger) pageNumber{
+    int tabviewTag = pageNumber % 2;
+    
+    CGRect tableNewFrame = CGRectMake(pageNumber * _mViewFrame.size.width, 0, _mViewFrame.size.width, _mViewFrame.size.height - TOPHEIGHT);
+    
+    UITableView *reuseTableView = _scrollTableViews[tabviewTag];
+    reuseTableView.frame = tableNewFrame;
+    [reuseTableView reloadData];
+}
+
+
+
+
 #pragma mark -- scrollView的代理方法
+
+-(void) modifyTopScrollViewPositiong: (UIScrollView *) scrollView{
+    if ([_topScrollView isEqual:scrollView]) {
+        CGFloat contentOffsetX = _topScrollView.contentOffset.x;
+        
+        CGFloat width = _slideView.frame.size.width;
+        
+        int count = (int)contentOffsetX/(int)width;
+        
+        CGFloat step = (int)contentOffsetX%(int)width;
+        
+        CGFloat sumStep = width * count;
+        
+        if (step > width/2) {
+            
+            sumStep = width * (count + 1);
+            
+        }
+        
+        [_topScrollView setContentOffset:CGPointMake(sumStep, 0) animated:YES];
+        return;
+    }
+
+}
+
+///拖拽后调用的方法
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    //[self modifyTopScrollViewPositiong:scrollView];
+}
+
+
+
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
     [self scrollViewDidEndDecelerating:scrollView];
+
+
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 
 {
-    _currentPage = _scrollView.contentOffset.x/_mViewFrame.size.width;
-    
-    UITableView *currentTable = _scrollTableViews[_currentPage];
-    [currentTable reloadData];
-    
+    if ([scrollView isEqual:_scrollView]) {
+        _currentPage = _scrollView.contentOffset.x/_mViewFrame.size.width;
+        
+        _currentPage = _scrollView.contentOffset.x/_mViewFrame.size.width;
+        
+        //    UITableView *currentTable = _scrollTableViews[_currentPage];
+        //    [currentTable reloadData];
+        
+        [self updateTableWithPageNumber:_currentPage];
+
+        return;
+    }
+    [self modifyTopScrollViewPositiong:scrollView];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if ([_scrollView isEqual:scrollView]) {
         CGRect frame = _slideView.frame;
-        frame.origin.x = scrollView.contentOffset.x/_tabCount;
+        
+        if (self.tabCount <= 6) {
+             frame.origin.x = scrollView.contentOffset.x/_tabCount;
+        } else {
+             frame.origin.x = scrollView.contentOffset.x/6;
+            
+        }
+        
+       
         _slideView.frame = frame;
     }
+    
 }
 
 
@@ -205,8 +313,8 @@
     
     
     SlideBarCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SlideBarCell"];
-    if ([tableView isEqual:_scrollTableViews[_currentPage]]) {
-         cell.tipTitle.text = _dataSource[_currentPage][indexPath.row];
+    if ([tableView isEqual:_scrollTableViews[_currentPage%2]]) {
+        cell.tipTitle.text = _dataSource[_currentPage][indexPath.row];
     }
    
     return cell;
