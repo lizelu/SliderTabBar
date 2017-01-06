@@ -31,11 +31,12 @@
 ///@brife 下面滑动的View
 @property (strong, nonatomic) UIView *slideView;
 
+///@brife 上方的view
+@property (strong, nonatomic) UIView *topMainView;
+
 ///@brife 上方的ScrollView
 @property (strong, nonatomic) UIScrollView *topScrollView;
 
-///@brife 上方的view
-@property (strong, nonatomic) UIView *topMainView;
 @end
 
 @implementation SlideTabBarView
@@ -198,6 +199,9 @@
 
 #pragma mark --根据scrollView的滚动位置复用tableView，减少内存开支
 -(void) updateTableWithPageNumber: (NSUInteger) pageNumber{
+    
+    [self changeBackColorWithPage:pageNumber];
+    
     int tabviewTag = pageNumber % 2;
     
     CGRect tableNewFrame = CGRectMake(pageNumber * _mViewFrame.size.width, 0, _mViewFrame.size.width, _mViewFrame.size.height - TOPHEIGHT);
@@ -208,6 +212,20 @@
 }
 
 
+- (void) changeBackColorWithPage: (NSInteger) currentPage {
+    for (int i = 0; i < _topViews.count; i ++) {
+        UIView *tempView = _topViews[i];
+        
+        UIButton *button = [tempView subviews][0];
+        if (i == currentPage) {
+            tempView.backgroundColor = [UIColor greenColor];
+            button.titleLabel.textColor = [UIColor redColor];
+        } else {
+            tempView.backgroundColor = [UIColor grayColor];
+            button.titleLabel.textColor = [UIColor whiteColor];
+        }
+    }
+}
 
 
 #pragma mark -- scrollView的代理方法

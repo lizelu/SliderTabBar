@@ -49,6 +49,7 @@
 		F4D023131B423DC300AEDDE1 /* SlideBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideBarCell.h; sourceTree = "<group>"; };
 		F4D023141B423DC300AEDDE1 /* SlideBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideBarCell.m; sourceTree = "<group>"; };
 		F4D023171B423DE800AEDDE1 /* SlideBarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideBarCell.xib; sourceTree = "<group>"; };
+		F4D7F3421B4BCCBD005AE412 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F4D950C61B3D26A1009BC4A5 /* PushWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushWebViewController.h; sourceTree = "<group>"; };
 		F4D950C71B3D26A1009BC4A5 /* PushWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +75,7 @@
 		F4C79ED91B3BD7AB00F27F5D = {
 			isa = PBXGroup;
 			children = (
+				F4D7F3421B4BCCBD005AE412 /* libz.dylib */,
 				F4C79EE41B3BD7AB00F27F5D /* SlideTabBar */,
 				F4C79EFE1B3BD7AB00F27F5D /* SlideTabBarTests */,
 				F4C79EE31B3BD7AB00F27F5D /* Products */,
@@ -194,9 +196,12 @@
 				TargetAttributes = {
 					F4C79EE11B3BD7AB00F27F5D = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = N5WRHCE748;
+						ProvisioningStyle = Automatic;
 					};
 					F4C79EFA1B3BD7AB00F27F5D = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = N5WRHCE748;
 						TestTargetID = F4C79EE11B3BD7AB00F27F5D;
 					};
 				};
@@ -378,10 +383,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: zeluli.SlideTabBar";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = N5WRHCE748;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lizelu/Desktop,
+				);
 				INFOPLIST_FILE = SlideTabBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "477ae4b2-89c5-4a0b-85e1-f40023f9de27";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -390,10 +403,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: zeluli.SlideTabBar";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = N5WRHCE748;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lizelu/Desktop,
+				);
 				INFOPLIST_FILE = SlideTabBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "477ae4b2-89c5-4a0b-85e1-f40023f9de27";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -401,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N5WRHCE748;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -420,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N5WRHCE748;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
